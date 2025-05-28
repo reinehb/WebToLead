@@ -1,40 +1,162 @@
 <!--  ----------------------------------------------------------------------  -->
 <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
-<!--  If necessary, please modify the charset parameter to specify the        -->
-<!--  character set of your HTML page.                                        -->
-<!--  ----------------------------------------------------------------------  -->
-
-<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-
-<!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: Please add the following <FORM> element to your page.             -->
-<!--  ----------------------------------------------------------------------  -->
-
-<form action="https://softsales-consulting--chediddemo.sandbox.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DAa00000FrbdV" method="POST">
-
-<input type="hidden" name="orgid" value="00DAa00000FrbdV">
-<input type="hidden" name="retURL" value="https://htmlpreview.github.io/?https://github.com/reinehb/WebToLead/blob/main/webtoLead.html">
-
-<!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-<!--  these lines if you wish to test in debug mode.                          -->
-<!--  <input type="hidden" name="debug" value=1>                              -->
-<!--  <input type="hidden" name="debugEmail"                                  -->
-<!--  value="reine.elhaber@softsales-consulting.com">                         -->
-<!--  ----------------------------------------------------------------------  -->
-
-<label for="name">Contact Name</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
-
-<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
-
-<label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
-
-<label for="subject">Subject</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
-
-<label for="description">Description</label><textarea name="description"></textarea><br>
-
-<input type="hidden"  id="external" name="external" value="1" /><br>
-
-<input type="submit" name="submit">
-
-</form>
+    <!--  If necessary, please modify the charset parameter to specify the        -->
+    <!--  character set of your HTML page.                                        -->
+    <!--  ----------------------------------------------------------------------  -->
+    
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Styled Contact Form</title>
+            <style>
+                body {
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    background: #f7f9fc;
+                    margin: 0;
+                    padding: 20px;
+                }
+                
+                .form-container {
+                    max-width: 600px;
+                    background: #ffffff;
+                    padding: 30px;
+                    margin: auto;
+                    border-radius: 12px;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                }
+                
+                .form-group {
+                    margin-bottom: 20px;
+                }
+                
+                label {
+                    display: block;
+                    font-weight: 600;
+                    margin-bottom: 6px;
+                }
+                
+                input[type="text"],
+                select,
+                textarea {
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+                    font-size: 14px;
+                    box-sizing: border-box;
+                }
+                
+                textarea {
+                    resize: vertical;
+                    height: 100px;
+                }
+                
+                input[type="submit"] {
+                    background-color: #007bff;
+                    color: white;
+                    padding: 12px 20px;
+                    border: none;
+                    border-radius: 6px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                }
+                
+                input[type="submit"]:hover {
+                    background-color: #0056b3;
+                }
+            </style>
+        </head>
+        
+        <!--  ----------------------------------------------------------------------  -->
+        <!--  NOTE: Please add the following <FORM> element to your page.             -->
+            <!--  ----------------------------------------------------------------------  -->
+            
+            <form action="https://softsales-consulting--chediddemo.sandbox.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DAa00000FrbdV" method="POST">
+                
+                <input type=hidden name="orgid" value="00DAa00000FrbdV">
+                <input type=hidden name="retURL" value="http://www.google.com">
+                
+                <!--  ----------------------------------------------------------------------  -->
+                <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+                <!--  these lines if you wish to test in debug mode.                          -->
+                <!--  <input type="hidden" name="debug" value=1>                              -->
+                <!--  <input type="hidden" name="debugEmail"                                  -->
+                <!--  value="reine.elhaber@softsales-consulting.com">                         -->
+                <!--  ----------------------------------------------------------------------  -->
+                
+                <div class="form-group">
+                    <label for="name">Contact Name</label>
+                    <input id="name" maxlength="80" name="name" type="text" />
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" maxlength="80" name="email" type="text" />
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input id="phone" maxlength="40" name="phone" type="text" />
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input id="subject" maxlength="80" name="subject" type="text" />
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reason">Case Reason</label>
+                    <select id="reason" name="reason">
+                        <option value="">--None--</option>
+                        <option value="Illness">Illness</option>
+                        <option value="Accident/Injury">Accident/Injury</option>
+                        <option value="Surgery">Surgery</option>
+                        <option value="Chronic Condition">Chronic Condition</option>
+                        <option value="Prescription Reimbursement">Prescription Reimbursement</option>
+                        <option value="Hospitalization">Hospitalization</option>
+                        <option value="Collision">Collision</option>
+                        <option value="Theft">Theft</option>
+                        <option value="Fire Damage">Fire Damage</option>
+                        <option value="Natural Disaster">Natural Disaster</option>
+                        <option value="Vandalism">Vandalism</option>
+                        <option value="Third-party Liability">Third-party Liability</option>
+                        <option value="Water Damage">Water Damage</option>
+                        <option value="Theft/Burglary">Theft/Burglary</option>
+                        <option value="Structural Collapse">Structural Collapse</option>
+                        <option value="Workplace Injury">Workplace Injury</option>
+                        <option value="Professional Negligence">Professional Negligence</option>
+                        <option value="Product Liability">Product Liability</option>
+                        <option value="Personal Injury Claim">Personal Injury Claim</option>
+                        <option value="Property Damage">Property Damage</option>
+                        <option value="Defamation">Defamation</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="type">Type</label>
+                    <select id="type" name="type">
+                        <option value="">--None--</option>
+                        <option value="Problem">Problem</option>
+                        <option value="Feature Request">Feature Request</option>
+                        <option value="Question">Question</option>
+                        <option value="Home">Home</option>
+                    </select>
+                </div>
+                
+                <input type="hidden" id="external" name="external" value="1" />
+                
+                <div class="form-group">
+                    <input type="submit" name="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </body>
+    </html>
+    
